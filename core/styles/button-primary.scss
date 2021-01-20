@@ -1,0 +1,25 @@
+@import '../../node_modules/meiuca-init-tokens/dist/tokens.scss';
+
+.btn-primary {
+    background-color: $color-brand-primary-medium;
+    border-radius: $border-radius-none;
+    font-family: $font-family-01;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-tight;
+    color: $color-neutral-lightest;
+    padding: $spacing-squish-sm;
+    border: $border-width-none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    min-width: 148px;
+
+    &:hover {
+        background-color: $color-brand-primary-dark;
+    }
+
+    &:active {
+        background-color: $color-brand-primary-darkest;
+    }
+}

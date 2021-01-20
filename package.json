@@ -1,0 +1,20 @@
+{
+  "name": "web-components-lit-element",
+  "version": "1.0.0",
+  "description": "",
+  "main": "counter.js",
+  "dependencies": {
+    "lit-element": "^2.4.0",
+    "meiuca-init-tokens": "0.0.10",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

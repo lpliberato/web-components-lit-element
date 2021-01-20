@@ -1,0 +1,15 @@
+@import '../../node_modules/meiuca-init-tokens/dist/tokens.scss';
+
+.card-shape {
+    width: 300px;
+    min-height: 352px;
+    border: solid $border-width-thin $color-neutral-medium;
+    background-color: $color-neutral-lightest;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+    padding: $spacing-inset-md;
+
+    &:hover {
+        box-shadow: $shadow-level-2;
+    }
+}

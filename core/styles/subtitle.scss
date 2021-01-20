@@ -1,0 +1,9 @@
+@import '../../node_modules/meiuca-init-tokens/dist/tokens.scss';
+
+.subtitle {
+    font-size: $font-size-md;
+    line-height: $line-height-medium;
+    font-family: $font-family-01;
+    font-weight: $font-weight-medium;
+    color: $color-neutral-dark;
+}
