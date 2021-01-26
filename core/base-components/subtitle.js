@@ -5,13 +5,6 @@ export class Subtitle extends LitElement {
 
     constructor() {
         super();
-        this.title = 'Subtitle';
-    }
-
-    static get properties() {
-        return {
-            title: { type: String, attribute: true }
-        };
     }
 
     connectedCallback() {
@@ -25,7 +18,7 @@ export class Subtitle extends LitElement {
     render() {
         return html`
         ${CSS}
-        <h2 class="subtitle">${this.title}</h2>
+        <h2 class="subtitle"><slot></slot></h2>
         `
     }
 }

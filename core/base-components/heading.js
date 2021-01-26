@@ -5,13 +5,6 @@ export class Heading extends LitElement {
 
     constructor() {
         super();
-        this.title = 'Heading SM';
-    }
-
-    static get properties() {
-        return {
-            title: { type: String, attribute: true }
-        };
     }
 
     connectedCallback() {
@@ -25,7 +18,7 @@ export class Heading extends LitElement {
     render() {
         return html`
         ${CSS}
-        <h1 class="heading">${this.title}</h1>`;
+        <h1 class="heading"><slot></slot></h1>`;
     }
 }
 

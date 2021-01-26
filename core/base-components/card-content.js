@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit-element';
 import CSS from '../styles/card-content-css';
-import { Heading } from './heading';
-import { Subtitle } from './subtitle';
-import { Paragraph } from './paragraph';
-import { ButtonPrimary } from './button-primary';
-import { CardShape } from './card-shape';
+import './heading';
+import './subtitle';
+import './paragraph';
+import './button-primary';
+import './card-shape';
 
 class CardContent extends LitElement {
 
@@ -21,8 +21,7 @@ class CardContent extends LitElement {
             title: { type: String, attribute: true },
             subtitle: { type: String, attribute: true },
             content: { type: String, attribute: true },
-            buttonLabel: { type: String, attribute: true },
-            finish: { type: CustomEvent, attribute: true }
+            buttonLabel: { type: String, attribute: true }
         }
     }
 
@@ -32,22 +31,22 @@ class CardContent extends LitElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         super.attributeChangedCallback(name, oldValue, newValue);
-
-        if (name === 'finish') {
-            this.dispatchEvent(new CustomEvent(name));
-        }
     }
 
     render() {
         return html`
         ${CSS}
         <card-shape>
-            <heading-sm title='${this.title}'></heading-sm>
-            <subtitle-ds title='${this.subtitle}'></subtitle-ds>
-            <paragraph-ds content='${this.content}'></paragraph-ds>
-            <button-primary title='${this.buttonLabel}'></button-primary>
+            <heading-sm>${this.title}</heading-sm>
+            <subtitle-ds>${this.subtitle}</subtitle-ds>
+            <paragraph-ds>${this.content}</paragraph-ds>
+            <button-primary @click="${() => this._handleClick()}">${this.buttonLabel}</button-primary>
         </card-shape>
         `;
+    }
+
+    _handleClick() {
+        this.dispatchEvent(new CustomEvent('buttonClick', { detail: 'are you sure?' }));
     }
 }
 customElements.define('card-content', CardContent);
