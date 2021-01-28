@@ -2,7 +2,7 @@
   "name": "web-components-lit-element",
   "version": "1.0.0",
   "description": "",
-  "main": "counter.js",
+  "main": "card-content.js",
   "dependencies": {
     "lit-element": "^2.4.0",
     "meiuca-init-tokens": "0.0.10",
